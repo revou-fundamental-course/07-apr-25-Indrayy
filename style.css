@@ -1,0 +1,67 @@
+body {
+    font-family: fantasy;
+    background-color: aliceblue;
+}
+
+.main-header {
+    display: flex;                    /* Align logo and nav in a row*/
+    justify-content: space-between;   /* Logo on left, nav on right*/
+    align-items: center;              /* Center navigation $ logo vertically*/
+    padding: 10px 20px;               /* Add spacing around the header*/
+    position: relative;
+}
+
+.main-logo {
+    height: 50px;
+    width: 50px;
+    /*background-image: url(https://picsum.photos/200);*/
+    /*background-size: cover;*/
+    /*background-position: center;*/
+    display: block;
+    margin: auto;
+    border-radius: 10px;
+}
+
+nav {
+    display: flex;               /* Arrange items in a row*/
+    justify-content: flex-end;   /* Align to the right*/
+    gap: 10px;                   /* Add spacing between items*/
+    margin: 10px 20px;           /* Add some margin around the navigation*/
+    /*align-items: center;*/
+}
+
+nav a {
+    text-decoration: none;        /* Remove underline from link*/
+    color: black;               /* Set the text color*/
+    border: 1px solid black;    /* Add a border around each link*/
+    padding: 8px;                 /* Add padding to make look like buttons*/   
+    border-radius: 4px;           /* Optional: Round the edges slightly*/ 
+    background-color:white ;    /* Optional: Add a background color*/
+    transition: all 0.3s ease;    /* Opt: Smooth the effect for hover states*/  
+}
+
+nav a:hover{
+    background-color: lightgray; /* Change background on hover*/
+    color: blue;                 /* change text color on hover*/
+    border-color: blue;          /* change border color on hover*/
+}
+
+.banner-img {
+    border: 2px solid red;
+    height: 400px;
+    background-image: url('Navia_Cafe_HD.jpg');
+    background-size: cover;
+    background-position: top;
+}
+
+main>section {
+    height: 800px;
+}
+
+.section-content {
+    text-align: center;
+}
+
+footer {
+    text-align: center;
+}
