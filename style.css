@@ -7,7 +7,7 @@ body {
     display: flex;                    /* Align logo and nav in a row*/
     justify-content: space-between;   /* Logo on left, nav on right*/
     align-items: center;              /* Center navigation $ logo vertically*/
-    padding: 10px 20px;               /* Add spacing around the header*/
+    padding: 0px 10px;               /* Add spacing around the header*/
     position: relative;
 }
 
@@ -17,17 +17,21 @@ body {
     /*background-image: url(https://picsum.photos/200);*/
     /*background-size: cover;*/
     /*background-position: center;*/
-    display: block;
-    margin: auto;
+    display: flex;
+    margin: 0;
+    position: absolute;
+    top: 0;                     /* align to the top */
+    left: 0;                    /* align to the left */
     border-radius: 10px;
+    align-self: flex-start;     /*Ensure the logo stays at the top*/
 }
 
 nav {
     display: flex;               /* Arrange items in a row*/
-    justify-content: flex-end;   /* Align to the right*/
+    justify-content: space-between;   /* Align to the right*/
     gap: 10px;                   /* Add spacing between items*/
-    margin: 10px 20px;           /* Add some margin around the navigation*/
-    /*align-items: center;*/
+    margin: 0;           /* Add some margin around the navigation*/
+    align-items: center;
 }
 
 nav a {
