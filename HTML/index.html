@@ -17,14 +17,14 @@
     <header class="main-header">
         <!-- Logo -->
         <div class="main-logo"></div>
-        <img src="./index_files/Revo U logo 50x50.jpeg" alt="Your Logo">
+        <img src="../Revo U logo 50x50.jpeg" alt="Your Logo">
 
         <!-- Navigation* -->
         <nav>
-            <a href="file:///F:/Projects/Revu%20SEFC%20Tasks/HTML/index.html#home-section">Home</a>
-            <a href="file:///F:/Projects/Revu%20SEFC%20Tasks/HTML/index.html#our-profile-section">Our Profile</a>
-            <a href="file:///F:/Projects/Revu%20SEFC%20Tasks/HTML/index.html#portfolio-section">Portfolio</a>
-            <a href="file:///F:/Projects/Revu%20SEFC%20Tasks/HTML/index.html#message-us-section">Message Us</a>
+            <a href="#home-section">Home</a>
+            <a href="#our-profile-section">Our Profile</a>
+            <a href="#portfolio-section">Portfolio</a>
+            <a href="#message-us-section">Message Us</a>
         </nav>
     </header>
 
@@ -87,16 +87,45 @@
             </header>
 
             <!-- Message Us Form -->
-            <form action="file:///F:/Projects/Revu%20SEFC%20Tasks/HTML/index.html#" method="post">
+             <div class="message-us-container">
+                <!-- Form Section -->
+                <div>
+                    <h3>Fill the request here please</h3>
+                </div>
+             
+            <form action="file:///F:/Projects/Revu%20SEFC%20Tasks/HTML/index.html#" method="post" class="vertical-form"
+            onsubmit="return displayFormData()">
                 <label for="name">Nama:</label>
-                <input type="text" id="name" name="name" placeholder="Your Name" required="">
+                <input type="text" id="name" name="name" placeholder="Your Name" required>
 
                 <label for="birth-date">Tanggal Lahir:</label>
-                <input type="date" id="birth-date" name="birth-date" placeholder="Your Birthday" required="">
+                <input type="date" id="birth-date" name="birth-date" placeholder="Your Birthday" required>
 
                 <label for="email">Email:</label>
-                <input type="email" id="nama email" name="email" placeholder="Your Email" required="">
+                <input type="email" id="nama email" name="email" placeholder="Your Email" required>
+                
+
+                <label>Jenis Kelamin:</label>
+                <div class="gender-option">
+                    <input type="radio" id="male" name="gender-option" value="male"
+                    required>
+                    <label for="male">Laki-laki</label>
+
+                    <input type="radio" id="female" name="gender-option" value="female"
+                    required>
+                    <label for="female">perempuan</label>
+                </div>
+                
+                <button type="submit">Validasi</button>
             </form>
+            </div>
+
+            <!-- Display Result Section -->
+            <div class="result-section">
+                <h3>Submitted Information</h3>
+            <div id="formResult"></div>
+            </div>
+    
         </section>
     </main>
 
