@@ -63,7 +63,7 @@ nav a:hover{
 }
 #home-section {
     background-color: aliceblue;
-    background-image: url('Home_background_HD.png');
+    background-image: url('../Home_background_HD.png');
     background-size: cover;              /* 100% or cover*/
     background-position: top;
     text-align: left;
@@ -94,7 +94,7 @@ nav a:hover{
     align-self: flex-end;
     background: linear-gradient(to bottom, #f0f0f0, #ffffff);   /*replaced with gradient*/
     background-size: cover;
-    background-image: url(Navia_Cafe_HD.jpg);
+    background-image: url(../Navia_Cafe_HD.jpg);
     background-position: top;
     border: 2px solid red;
     height: 460px;
