@@ -59,7 +59,7 @@ nav a:hover{
 
 .Northland-font{
     font-family: 'Northland Script';
-    font-size: 100px;
+    font-size: 80px;
     color: pink;
 }
 #home-section {
@@ -78,7 +78,7 @@ nav a:hover{
     padding: 20px;
     overflow: hidden;      /* Prevent overflow of slider*/
     width: 100%;
-    height: 300px;        /* adjust height as needed*/  
+    height: auto;        /* adjust height as needed*/  
     margin-top: 60px;     /* adjust spacing to avoid overlapping */
 }
 /*Slider Container*/
@@ -94,22 +94,34 @@ nav a:hover{
 
 /*Individual slides*/
 .slide{                     /* Style the slides*/
+    position: relative;
     flex: 0 0 100%;         /* Each slide takes up 100% of the container width*/
     align-items: center;            /* Center text & Image horizontally*/
     justify-content: center;
     display: flex;
-    /*top: 0;*/
-    /*left: 100%;           /*Start outside the container*/
-    /*width: 100%;
+    top: 0;
+    left: 100%;           /*Start outside the container*/
+    width: 100%;
     /*animation: slideAnimation 5s infinite;  /* Apply sliding animation*/
 }
 
 /*Images*/
 .slide-img{
-    width: 100%;         /*Maintain aspect ratio*/
-    height: auto;        /*Fit within container*/
+    width : 100%;         /*Maintain aspect ratio*/
+    height: 100%;         /*Fit within container*/
     object-fit: cover;   /* Ensure no distortion*/
+    display: block;
 }
+
+#overlay-text{
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+    z-index:2;
+}
+
 
 @keyframes slideAnimation{
     0%{
@@ -222,6 +234,9 @@ main>section {
 .section-content {
     text-align: center;
     padding-top: 80px;
+    padding: 20px; /* Adds spacing */
+    font-family: 'Georgia', serif; /* Styling for `test-font` */
+    color: crimson;
 }
 
 footer {

@@ -1,6 +1,8 @@
 // Our Profile Area
 
+document.addEventListener('DOMContentLoaded', () => {
 const slider = document.getElementById('slider-profile');
+const Slides = document.querySelectorAll('.slide');
 let currentSlide = 0;
 
 function showSlide(index) {
@@ -8,12 +10,13 @@ function showSlide(index) {
 }
 
 function nextSlide() {
-    currentSlide = (currentSlide + 1) % 2; // Alternate between 2 slides (0 and 1)
+    currentSlide = (currentSlide + 1) % Slides.length;        //2; // Alternate between 2 slides (0 and 1)
     showSlide(currentSlide);
 }
 
-// Initialize and loop the sliding behavior
+ //Initialize and loop the sliding behavior
 setInterval(nextSlide, 3000); // Slides every 3 seconds
+});
 
 // Message Us Area Here
 function validateForm() {
