@@ -1,3 +1,21 @@
+// Our Profile Area
+
+const slider = document.getElementById('slider-profile');
+let currentSlide = 0;
+
+function showSlide(index) {
+    slider.style.transform = `translateX(-${index * 100}%)`; // Shift slider to show the current slide
+}
+
+function nextSlide() {
+    currentSlide = (currentSlide + 1) % 2; // Alternate between 2 slides (0 and 1)
+    showSlide(currentSlide);
+}
+
+// Initialize and loop the sliding behavior
+setInterval(nextSlide, 3000); // Slides every 3 seconds
+
+// Message Us Area Here
 function validateForm() {
     const name = document.getElementById('name').value.trim();
     const birthDate = document.getElementById('birth-date').value.trim();
@@ -65,6 +83,8 @@ function displayFormData() {
     }else{
         console.error("Hasil kontainer dari (#formResult) tidak ditemukan!")
     }
+
+
     
 
     // Prevent default form submission

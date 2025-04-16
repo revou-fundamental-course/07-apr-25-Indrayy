@@ -32,6 +32,7 @@ nav {
     gap: 10px;                          /* Add spacing between items*/
     margin: 0;                          /* Add some margin around the navigation*/
     align-items: center;
+    z-index: 2;
 }
 
 nav a {
@@ -58,7 +59,7 @@ nav a:hover{
 
 .Northland-font{
     font-family: 'Northland Script';
-    font-size: 80px;
+    font-size: 100px;
     color: pink;
 }
 #home-section {
@@ -71,14 +72,62 @@ nav a:hover{
 }
 
 #our-profile-section {
-    background-color: #f9f9f9;
+    position: relative;
+    background-color: #fff8dc;
+    /*background-image:url('../Our_Profile_1.png');*/
     padding: 20px;
+    overflow: hidden;      /* Prevent overflow of slider*/
+    width: 100%;
+    height: 300px;        /* adjust height as needed*/  
+    margin-top: 60px;     /* adjust spacing to avoid overlapping */
+}
+/*Slider Container*/
+#slider-profile{            /* Ensure the slider stays within Our Profile*/
+    display: flex;
+    position: relative;
+    overflow: hidden;       /* Prevent slide is spilling outside*/
+    width: 100%;            /* Adjust it as needed*/
+    height: 300px;          /* Adjust based on your images*/
+    transition: transform 1s ease-in-out; /* Smooth sliding transition*/
+    z-index: 1;
+}
+
+/*Individual slides*/
+.slide{                     /* Style the slides*/
+    flex: 0 0 100%;         /* Each slide takes up 100% of the container width*/
+    align-items: center;            /* Center text & Image horizontally*/
+    justify-content: center;
+    display: flex;
+    /*top: 0;*/
+    /*left: 100%;           /*Start outside the container*/
+    /*width: 100%;
+    /*animation: slideAnimation 5s infinite;  /* Apply sliding animation*/
+}
+
+/*Images*/
+.slide-img{
+    width: 100%;         /*Maintain aspect ratio*/
+    height: auto;        /*Fit within container*/
+    object-fit: cover;   /* Ensure no distortion*/
+}
+
+@keyframes slideAnimation{
+    0%{
+        transform: translateX(0%);
+    }
+    50%{
+        transform: translateX(-100%);
+    }
+    100%{
+        transform: translateX(0%);
+    }
 }
 
 #portfolio-section {
     background-color: lavender;
     text-align: left;
 }
+
 
 #message-us-section {
     background-color: lightyellow;
@@ -151,14 +200,13 @@ nav a:hover{
     height: 460px;
     
 }
-/*.banner-text {
-    position: absolute; /* Layer over the background */
-    /*top: 50%; /* Center vertically */
-    /*left: 50%; /* Center horizontally */
-    /*transform: translate(-50%, -50%); /* Perfect centering */
-    /*text-align: center; /* Align text inside the box */
-    /*color: white; /* Text color */
-/*}*/
+.banner-text {
+    position: center; /* Layer over the background */
+    top: 50%; /* Center vertically */
+    left: 50%; /* Center horizontally */
+    transform: translate(-50%, -50%); /* Perfect centering */
+    text-align: center; /* Align text inside the box */
+}*
 
 .container {
     display: grid;               /* Enables Grid layout */
