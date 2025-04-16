@@ -89,7 +89,10 @@ nav a:hover{
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 #formResult {
+    display: flex;
+    flex-direction: column;              /* Arrange items certically*/
     padding: 10px;
+    gap: 10px;                           /* Add space between list items*/
     border: 1px solid #ccc;
     border-radius: 5px;
     background-color: #f9f9f9;
@@ -101,11 +104,36 @@ nav a:hover{
 }
 .message-us-container{
     display: flex;
-    justify-content: space-between;
-    gap: 20px;
+    flex-direction: column;
+    justify-content: space-between;   /* Align form and result */
+    gap: 20px;          /* Add space between containers*/    
     margin: 0 auto;    /*centers the container*/
     width: 100%;       /*ensure the container takes enogh space*/
     max-width: 1200px; /*limit the maximmum width for readability*/
+}
+
+.vertical-form{
+    display: flex;
+    flex-direction: column;        /* Aligns input vertically*/
+    gap: 15px;                     /* Add space between fields*/
+    width: 100%;
+    max-width: 400px;
+}
+
+.form-section{
+    flex: 1; /* Allocate equal space to form*/
+    padding: 20px;
+    background-color: #f4f4f9;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+}
+
+.result-section{
+    flex: 1;    /* Allocate equal space to result*/
+    padding: 20px;
+    background-color: #f4f4f9;
+    border: 1px solid #ccc;
+    border-radius: 10px;
 }
 
 .banner-img {
