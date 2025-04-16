@@ -74,7 +74,6 @@ nav a:hover{
 #our-profile-section {
     position: relative;
     background-color: #fff8dc;
-    /*background-image:url('../Our_Profile_1.png');*/
     padding: 20px;
     overflow: hidden;      /* Prevent overflow of slider*/
     width: 100%;
@@ -83,7 +82,7 @@ nav a:hover{
 }
 /*Slider Container*/
 #slider-profile{            /* Ensure the slider stays within Our Profile*/
-    display: flex;
+    display: flex;          /* align slides side by side*/
     position: relative;
     overflow: hidden;       /* Prevent slide is spilling outside*/
     width: 100%;            /* Adjust it as needed*/
@@ -97,11 +96,12 @@ nav a:hover{
     position: relative;
     flex: 0 0 100%;         /* Each slide takes up 100% of the container width*/
     align-items: center;            /* Center text & Image horizontally*/
+    position: relative;
     justify-content: center;
     display: flex;
-    top: 0;
+    /*top: 0;
     left: 100%;           /*Start outside the container*/
-    width: 100%;
+    /*width: 100%;*/
     /*animation: slideAnimation 5s infinite;  /* Apply sliding animation*/
 }
 
@@ -123,7 +123,7 @@ nav a:hover{
 }
 
 
-@keyframes slideAnimation{
+/*@keyframes slideAnimation{
     0%{
         transform: translateX(0%);
     }
@@ -133,7 +133,7 @@ nav a:hover{
     100%{
         transform: translateX(0%);
     }
-}
+}*/
 
 #portfolio-section {
     background-color: lavender;

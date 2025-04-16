@@ -2,24 +2,42 @@
 
 document.addEventListener('DOMContentLoaded', () => {
 const slider = document.getElementById('slider-profile');
-const Slides = document.querySelectorAll('.slide');
-console.log(Slides); // Should log the array of slides
+const slides = document.querySelectorAll('.slide');         // Array of slides images
+const interval = 3000;
+//let currentSlide = 0; //Start with the first slide
+console.log(slides); // Should log the array of slides
 console.log(slider); // Should log the slider container
 
-let currentSlide = 0;
+function startSlideLoop() {
+    for (let i = 0; i < slides.length; i++) {
+      setTimeout(() => {
+        slider.style.transform = `translateX(-${i * 100}%)`;
+        // When reaching the last slide, start the loop again
+        if (i === slides.length - 1) {
+          setTimeout(startSlideLoop, interval);
+        }
+      }, i * interval);
+    }
+  }
 
-function showSlide(index) {
+  startSlideLoop();
+});
+
+
+/*function showSlide(index) {
     slider.style.transform = `translateX(-${index * 100}%)`; // Shift slider to show the current slide
-}
+    console.log('Showing slide ${index}');
+}*/
 
-function nextSlide() {
+
+/*function nextSlide() {
     currentSlide = (currentSlide + 1) % Slides.length;        //2; // Alternate between 2 slides (0 and 1)
     showSlide(currentSlide);
-}
+}*/
 
  //Initialize and loop the sliding behavior
-setInterval(nextSlide, 3000); // Slides every 3 seconds
-});
+//setInterval(nextSlide, 3000); // Slides every 3 seconds
+
 
 // Message Us Area Here
 function validateForm() {
