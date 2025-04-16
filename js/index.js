@@ -3,6 +3,9 @@
 document.addEventListener('DOMContentLoaded', () => {
 const slider = document.getElementById('slider-profile');
 const Slides = document.querySelectorAll('.slide');
+console.log(Slides); // Should log the array of slides
+console.log(slider); // Should log the slider container
+
 let currentSlide = 0;
 
 function showSlide(index) {
