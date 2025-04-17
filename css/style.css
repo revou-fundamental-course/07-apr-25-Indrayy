@@ -87,7 +87,7 @@ nav a:hover{
     overflow: hidden;       /* Prevent slide is spilling outside*/
     width: 100%;            /* Adjust it as needed*/
     height: 300px;          /* Adjust based on your images*/
-    /*transition: transform 1s ease-in-out; /* Smooth sliding transition*/
+    transition: transform 5s ease-in-out; /* Smooth sliding transition*/
     z-index: 1;
 }
 
@@ -97,7 +97,7 @@ nav a:hover{
     align-items: center;            /* Center text & Image horizontally*/
     position: relative;
     justify-content: center;
-    /*display: flex;*/
+    display: flex;
     border: 2px solid red;
     width : 100%;         /*Maintain aspect ratio*/
     height: 100%;         /*Fit within container*/
@@ -129,7 +129,7 @@ nav a:hover{
     left: 50%;
     transform: translateX(-50%);
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
-    z-index:2;
+    /*z-index:2;*/
 }
 
 
@@ -145,12 +145,30 @@ nav a:hover{
     }
 }
 
+/*Portfolio Area*/
+
 #portfolio-section {
-    background-color: lavender;
+    background-color: rgb(211, 125, 63);
+    background-image: url(../rolled_matsutake_HD.png);
     text-align: left;
 }
 
+.port-profile{
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+}
+.port-logo1{
+    background-image:url(../fontain_hq.png) ;
+}
+.port-logo2{
+    background-image: url(../inazuma_office.png);
+}
+.port-logo3{
+    background-image: url(../natlan_office.png);
+}
 
+/*Message Us area*/
 #message-us-section {
     background-color: lightyellow;
     padding: 20px;
@@ -175,36 +193,41 @@ nav a:hover{
 }
 .message-us-container{
     display: flex;
-    flex-direction: column;
-    justify-content: space-between;   /* Align form and result */
-    gap: 20px;          /* Add space between containers*/    
-    margin: 0 auto;    /*centers the container*/
-    width: 100%;       /*ensure the container takes enogh space*/
-    max-width: 1200px; /*limit the maximmum width for readability*/
+    flex-direction: column;                 /* trial and error to make horizontal */
+    justify-content: space-between;         /* Align form and result */
+    align-items: flex-start;                /* align top of containers*/ 
+    gap: 20px;                              /* Add space between containers*/    
+    margin: 0 auto;                         /*centers the container*/
+    width: 100%;                            /*ensure the container takes enogh space*/
+    max-width: 1200px;                      /*limit the maximmum width for readability*/
+    /*padding: 20px;*/
 }
 
 .vertical-form{
     display: flex;
-    flex-direction: column;        /* Aligns input vertically*/
-    gap: 15px;                     /* Add space between fields*/
+    flex-direction: column;           /* Aligns input vertically*/
+    /*gap: 15px;                     /* Add space between fields*/
     width: 100%;
     max-width: 400px;
 }
 
 .form-section{
-    flex: 1; /* Allocate equal space to form*/
+    flex: 1;           /* Allocate equal space to form*/
+    /*max-width: 48%;    /* set max width for the form*/
     padding: 20px;
     background-color: #f4f4f9;
     border: 1px solid #ccc;
     border-radius: 10px;
 }
 
-.result-section{
+.result-section {
     flex: 1;    /* Allocate equal space to result*/
+                /*max-width: 48%;*/
     padding: 20px;
     background-color: #f4f4f9;
     border: 1px solid #ccc;
     border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .banner-img {
@@ -246,7 +269,8 @@ main>section {
     padding-top: 80px;
     padding: 20px; /* Adds spacing */
     font-family: 'Georgia', serif; /* Styling for `test-font` */
-    color: crimson;
+    font-size: 50px;
+    color: rgb(20, 53, 220);
 }
 
 footer {
