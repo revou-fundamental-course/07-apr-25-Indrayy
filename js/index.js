@@ -1,42 +1,38 @@
-// Our Profile Area
+let indexProfile = 0; // Current slide index
 
-document.addEventListener('DOMContentLoaded', () => {
-const slider = document.getElementById('slider-profile');
-const slides = document.querySelectorAll('.slide');         // Array of slides images
-const interval = 3000;
-//let currentSlide = 0; //Start with the first slide
-console.log(slides); // Should log the array of slides
-console.log(slider); // Should log the slider container
+function nextProfile() {
+    indexProfile += 1;
+    showProfile(); // Update and display the next profile image
+}
 
-function startSlideLoop() {
-    for (let i = 0; i < slides.length; i++) {
-      setTimeout(() => {
-        slider.style.transform = `translateX(-${i * 100}%)`;
-        // When reaching the last slide, start the loop again
-        if (i === slides.length - 1) {
-          setTimeout(startSlideLoop, interval);
-        }
-      }, i * interval);
+function showProfile() {
+    console.log('Profile function started');
+    const profileList = document.getElementsByClassName('slide'); // Select all profile slides
+    console.log('Profile List:', profileList);
+
+    // Reset index if it exceeds the total number of slides
+    if (indexProfile > profileList.length - 1) {
+        indexProfile = 0;
     }
-  }
 
-  startSlideLoop();
+    // Hide all slides with a loop
+    for (let i = 0; i < profileList.length; i++) {
+        profileList[i].style.display = 'none'; // Set display to none
+    }
+
+    // Show the current slide
+    profileList[indexProfile].style.display = 'block'; // Set display to block for the active slide
+}
+
+// Initialize the slider
+setInterval(() => {
+    nextProfile(); // Change slides every 3 seconds
+}, 3000);
+
+// Show the first slide on page load
+document.addEventListener('DOMContentLoaded', () => {
+    showProfile();
 });
-
-
-/*function showSlide(index) {
-    slider.style.transform = `translateX(-${index * 100}%)`; // Shift slider to show the current slide
-    console.log('Showing slide ${index}');
-}*/
-
-
-/*function nextSlide() {
-    currentSlide = (currentSlide + 1) % Slides.length;        //2; // Alternate between 2 slides (0 and 1)
-    showSlide(currentSlide);
-}*/
-
- //Initialize and loop the sliding behavior
-//setInterval(nextSlide, 3000); // Slides every 3 seconds
 
 
 // Message Us Area Here
