@@ -59,7 +59,7 @@ nav a:hover{
 
 .Northland-font{
     font-family: 'Northland Script';
-    font-size: 80px;
+    font-size: 50px;
     color: pink;
 }
 #home-section {
@@ -160,12 +160,15 @@ nav a:hover{
 }
 .port-logo1{
     background-image:url(../fontain_hq.png) ;
+    background-position: top;                   /* to plot it front of background img*/
 }
 .port-logo2{
     background-image: url(../inazuma_office.png);
+    background-position: top;
 }
 .port-logo3{
     background-image: url(../natlan_office.png);
+    background-position: top;
 }
 
 a.special:visited{
