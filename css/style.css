@@ -54,7 +54,7 @@ nav a:hover{
 .test-font {
     font-family: 'Georgia', serif;
     font-size: 50px;
-    color: crimson;
+    color: rgb(20, 220, 87);
 }
 
 .Northland-font{
@@ -168,6 +168,11 @@ nav a:hover{
     background-image: url(../natlan_office.png);
 }
 
+a.special:visited{
+    color: red;
+}
+
+
 /*Message Us area*/
 #message-us-section {
     background-color: lightyellow;
@@ -269,7 +274,7 @@ main>section {
     padding-top: 80px;
     padding: 20px; /* Adds spacing */
     font-family: 'Georgia', serif; /* Styling for `test-font` */
-    font-size: 50px;
+    font-size: 20px;
     color: rgb(20, 53, 220);
 }
 
