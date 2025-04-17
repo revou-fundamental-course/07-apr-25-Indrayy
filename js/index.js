@@ -41,6 +41,7 @@ function validateForm() {
     const birthDate = document.getElementById('birth-date').value.trim();
     const email = document.getElementById('email').value.trim();
     const gender = document.querySelector('input[name="gender"]:checked');
+    const message = document.getElementById('message').value.trim();
 
     // Validate Name
     if (!/^[a-zA-Z\s]+$/.test(name)) {
@@ -66,6 +67,12 @@ function validateForm() {
         return false;
     }
 
+    // Validate message
+    if (!message) {
+        alert('Silakan isi pesan anda.');
+        return false;
+    }
+
     alert('Form berhasil dikirim!');
     return true;
 }
@@ -77,12 +84,13 @@ function displayFormData() {
     const email = document.getElementById('email').value.trim();
     const genderElement = document.querySelector('input[name="gender-option"]:checked');
     const gender = genderElement ? genderElement.value : null;
+    const message = document.getElementById('message').value.trim();
 
     // Debugging: Log the collected values
-    console.log("Collected values: ",{name, birthDate, email, gender})
+    console.log("Collected values: ",{name, birthDate, email, gender,message})
 
     // Check if all fields are field
-    if(!name || !birthDate || !email || !gender){
+    if(!name || !birthDate || !email || !gender || !message){
         alert("Please fill out all fields before submitting.");
         return false;     // Prevent form submission
     }
@@ -97,15 +105,13 @@ function displayFormData() {
         <li><strong>Tanggal Lahir:</strong> ${birthDate}</li>
         <li><strong>Email:</strong> ${email}</li>
         <p><strong>Gender:</strong> ${gender}</p>
+        <li><Strong>Pesan Anda:</strong>${message}</li>
     </ul>
     `;
      console.log("Hasil kontainer telah diperbarui!");   
     }else{
         console.error("Hasil kontainer dari (#formResult) tidak ditemukan!")
     }
-
-
-    
 
     // Prevent default form submission
     return false;
